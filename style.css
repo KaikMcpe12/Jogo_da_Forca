@@ -22,7 +22,7 @@ body{
 }
 
 /* Mensagme final */
-.final-message{
+.box-message{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ body{
   height: 100vh;
 }
 
-.final-message button{
+.box-message button{
   font-size: 1.7rem;
   background-color: rgb(69, 114, 94);
   padding: 7.5px 11.25px;
@@ -48,7 +48,7 @@ body{
   color: white;
 }
 
-.final-message.disabled{
+.box-message.disabled{
   display: none;
 }
 
@@ -83,6 +83,7 @@ img{
   margin: 0 2px 12px;
   text-align: center;
   position: relative;
+  z-index: -1;
 }
 
 .letter::after{
@@ -96,7 +97,8 @@ img{
   position: absolute;
 }
 
-.space{
+.letter.space::after{
+  opacity: 0;
   width: 36px;
   height: 3px;
   border-radius: 10px;
@@ -121,7 +123,7 @@ img{
   cursor: pointer;
 }
 
-.key.pressed{
+.key.pressed, .restart:hover{
   opacity: 0.3;
 }
 
